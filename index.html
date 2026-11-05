@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solavo – Le logiciel du cabinet d'avocat sur iPhone, iPad et Mac</title>
+<meta name="description" content="Solavo : temps passé, facturation, relances, audiences et délais pour les cabinets d'avocats, sur iPhone, iPad, Mac et Apple Watch. Vos données dans votre iCloud, chiffrées de bout en bout. France, Belgique, Luxembourg, Suisse.">
+<meta name="apple-itunes-app" content="app-id=6821729358">
+<meta property="og:title" content="Solavo – Cabinet d'avocat">
+<meta property="og:description" content="Temps, facturation, audiences : tout votre cabinet dans une app native Apple, chiffrée de bout en bout.">
+<meta property="og:image" content="https://solavo.fr/icone-512.png">
+<link rel="icon" href="favicon-32.png">
+<link rel="apple-touch-icon" href="icone-180.png">
+<style>
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(Fraunces-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(Fraunces-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(InstrumentSans-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(InstrumentSans-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(InstrumentSans-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(InstrumentSans-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(InstrumentSans-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(InstrumentSans-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body { margin: 0; font-family: 'Instrument Sans', system-ui, sans-serif; background: #F7F5EE; color: #16281D; -webkit-font-smoothing: antialiased; }
+a { color: #16281D; text-decoration: none; }
+a:hover { color: #2B8556; }
+.captures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.captures img { width: 100%; height: auto; border-radius: 22px; display: block; box-shadow: 0 18px 40px rgba(17,74,46,0.18); }
+@media (max-width: 900px) { .captures { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { h1 { font-size: 42px !important; } h2 { font-size: 32px !important; } }
+</style>
+</head>
+<body>
+<div style="width: 100%; min-height: 100px; background: #F7F5EE; box-sizing: border-box; display: flex; flex-direction: column">
+
+  <!-- NAV -->
+  <div style="box-sizing: border-box; width: 100%; padding: 20px 24px; display: flex; justify-content: center; border-bottom: 1px solid #E6E1D0">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <img src="icone-180.png" alt="Icône Solavo" style="width: 34px; height: 34px; border-radius: 8px; display: block">
+        <div style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 24px; letter-spacing: -0.01em; color: #114A2E">solavo</div>
+      </div>
+      <div style="flex: 1 1 auto"></div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+        <a href="#fonctions">Fonctionnalités</a>
+        <a href="#captures">Aperçu</a>
+        <a href="#securite">Sécurité</a>
+        <a href="#pays">Pays</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="https://apps.apple.com/fr/app/solavo/id6821729358" style="background: #114A2E; color: #F7F5EE; padding: 10px 18px; border-radius: 999px">Télécharger</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="box-sizing: border-box; width: 100%; padding: 72px 24px 56px; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+      <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <div style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; border: 1px solid #DCD6C2; border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500; color: #5E6B59">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #D9B45A; display: inline-block"></span>
+          Natif Mac · iPhone · iPad · Apple Watch
+        </div>
+        <h1 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 58px; line-height: 1.06; letter-spacing: -0.015em; color: #16281D">Votre cabinet.<br>Enfin à la hauteur<br>de votre Mac.</h1>
+        <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #4E5C50; max-width: 500px">Du premier rendez-vous à l'encaissement : dossiers, temps, audiences, délais et factures dans une app née dans un vrai cabinet, qui grandit avec le vôtre — de l'avocat seul au cabinet de trente. Sans serveur chez nous : vos données restent dans votre iCloud, chiffrées de bout en bout.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+          <a href="https://apps.apple.com/fr/app/solavo/id6821729358" style="background: linear-gradient(135deg, #2B8556, #114A2E); color: #FFF; padding: 15px 26px; border-radius: 999px; font-weight: 600; font-size: 16px">Télécharger dans l'App Store</a>
+          <a href="#fonctions" style="padding: 15px 10px; font-weight: 600; font-size: 16px; color: #4E5C50">Découvrir l'app →</a>
+        </div>
+        <div style="font-size: 13px; color: #7D8878">14 jours d'essai gratuit · Au premier lancement, un cabinet d'exemple déjà rempli à explorer · France · Belgique · Luxembourg · Suisse</div>
+      </div>
+
+      <!-- Mockup iPhone -->
+      <div style="flex: 1 1 360px; min-width: 0; display: flex; justify-content: center; padding: 12px 0">
+        <div style="width: 290px; height: 590px; border-radius: 44px; background: #114A2E; padding: 10px; box-sizing: border-box; box-shadow: 0 30px 60px rgba(17,74,46,0.3)">
+          <div style="width: 100%; height: 100%; border-radius: 35px; background: #F7F5EE; box-sizing: border-box; padding: 22px 18px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+            <div style="display: flex; align-items: center; justify-content: space-between">
+              <div style="display: flex; align-items: center; gap: 8px">
+                <img src="icone-180.png" alt="" style="width: 22px; height: 22px; border-radius: 6px; display: block">
+                <div style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px; color: #114A2E">Dossiers</div>
+              </div>
+              <div style="width: 30px; height: 30px; border-radius: 50%; background: #114A2E; color: #F7F5EE; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 500; padding-bottom: 2px; box-sizing: border-box">+</div>
+            </div>
+            <div style="background: #FFF; border: 1px solid #E6E1D0; border-radius: 14px; padding: 13px 14px; display: flex; flex-direction: column; gap: 5px">
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+                <div style="font-weight: 600; font-size: 14px">Durand c/ SCI Lumen</div>
+                <div style="font-size: 10.5px; font-weight: 600; color: #8A6B20; border: 1px solid #C9A64A; border-radius: 999px; padding: 2px 8px; white-space: nowrap">Audience J-6</div>
+              </div>
+              <div style="font-size: 12px; color: #7D8878">Bail commercial · TJ Marseille · délai 908 au 12/11</div>
+            </div>
+            <div style="background: #FFF; border: 1px solid #E6E1D0; border-radius: 14px; padding: 13px 14px; display: flex; flex-direction: column; gap: 5px">
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+                <div style="font-weight: 600; font-size: 14px">Succession Mercier</div>
+                <div style="font-size: 10.5px; font-weight: 600; color: #8A6B20; border: 1px solid #C9A64A; border-radius: 999px; padding: 2px 8px; white-space: nowrap">Forfait 82 %</div>
+              </div>
+              <div style="font-size: 12px; color: #7D8878">Conseil · 12 pièces · 4,2 h saisies</div>
+            </div>
+            <div style="background: #FFF; border: 1px solid #E6E1D0; border-radius: 14px; padding: 13px 14px; display: flex; flex-direction: column; gap: 5px">
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+                <div style="font-weight: 600; font-size: 14px">SAS Novelia</div>
+                <div style="font-size: 10.5px; font-weight: 600; color: #1F6B44; border: 1px solid #2B8556; border-radius: 999px; padding: 2px 8px; white-space: nowrap">Facturé</div>
+              </div>
+              <div style="font-size: 12px; color: #7D8878">Contentieux · note d'honoraires n° 2026-0041</div>
+            </div>
+            <div style="margin-top: auto; background: #114A2E; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 12px">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9B45A" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 1.5M10 2h4"></path></svg>
+              <div style="color: #F7F5EE; font-size: 12.5px; line-height: 1.4">Chrono en cours — Durand · 00:42:10<br><span style="color: #9DB8A6">Aussi sur l'écran verrouillé, l'Apple Watch et son cadran.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANDEAU CONFIANCE -->
+  <div style="box-sizing: border-box; width: 100%; padding: 22px 24px; background: #114A2E; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center; justify-content: center; color: #BFD3C2; font-size: 14px; font-weight: 500">
+      <span>Chiffrement de bout en bout</span>
+      <span style="color: #3E6B50">·</span>
+      <span>Vos données dans votre iCloud, pas sur nos serveurs</span>
+      <span style="color: #3E6B50">·</span>
+      <span>Pensé pour le secret professionnel</span>
+      <span style="color: #3E6B50">·</span>
+      <span>FR · BE · LU · CH</span>
+    </div>
+  </div>
+
+  <!-- FONCTIONNALITES -->
+  <div id="fonctions" style="box-sizing: border-box; width: 100%; padding: 88px 24px 72px; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-direction: column; gap: 44px">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6B44">L'essentiel du cabinet</div>
+        <h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 40px; line-height: 1.12; letter-spacing: -0.01em; color: #16281D">Né dans un cabinet, pas dans une salle de réunion.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4E5C50">Solavo reconstruit — en mieux — l'outil qu'un cabinet s'était taillé sur mesure pendant des années. Chaque écran correspond à un geste réel de la journée d'un avocat, sans formation ni consultant.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <div style="flex: 1 1 250px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B8556" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg>
+          <div style="font-weight: 600; font-size: 18px">Dossiers &amp; clients</div>
+          <div style="font-size: 14.5px; line-height: 1.55; color: #4E5C50">Tout le dossier en un écran : parties, pièces, notes, tâches et audiences. L'alerte de conflit d'intérêts tombe avant d'accepter l'affaire — pas après. Appel, message ou e-mail depuis chaque fiche, l'objet portant déjà la référence du dossier.</div>
+        </div>
+        <div style="flex: 1 1 250px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B8556" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+          <div style="font-weight: 600; font-size: 18px">Temps &amp; facturation</div>
+          <div style="font-size: 14.5px; line-height: 1.55; color: #4E5C50">Le chrono tourne — c'est lui, sur l'icône —, l'app fait le reste : note d'honoraires en un geste, provisions et avoirs, QR code de virement. Les relances partent graduées, et le rapprochement bancaire reconnaît vos encaissements tout seul, numéro de facture lu dans le libellé du virement.</div>
+        </div>
+        <div style="flex: 1 1 250px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B8556" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+          <div style="font-weight: 600; font-size: 18px">Audiences &amp; délais</div>
+          <div style="font-size: 14.5px; line-height: 1.55; color: #4E5C50">Les délais qui font les nuits blanches — appel, conclusions 908/909, prescription — calculés selon le Code de procédure et rappelés à J-7, J-2 et le jour même. Et si le dossier audiencé traîne des impayés, vous le savez une semaine avant de plaider.</div>
+        </div>
+        <div style="flex: 1 1 250px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B8556" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+          <div style="font-weight: 600; font-size: 18px">Pièces &amp; coffre chiffré</div>
+          <div style="font-size: 14.5px; line-height: 1.55; color: #4E5C50">Scannez une pièce au téléphone, tamponnez-la « Pièce n° 3 », communiquez le bordereau. Chaque document est chiffré avant de quitter l'appareil, et l'espace client en ligne tient votre client informé — sans pièce jointe qui traîne dans un e-mail.</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+        <span style="font-size: 13.5px; font-weight: 600; color: #7D8878; text-transform: uppercase; letter-spacing: 0.06em; margin-right: 6px">Et aussi</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Rentabilité par client, dossier et matière</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Convention d'honoraires signée à distance</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Aide juridictionnelle</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Vigilance LCB-FT</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Exports comptables (FEC, TVA, 2035)</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Factures fournisseurs</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Intérêts légaux</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Import Excel &amp; Contacts</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Widgets &amp; notes dictées</span>
+        <span style="border: 1px solid #E6E1D0; border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 500; color: #4E5C50; white-space: nowrap">Recherche globale, même hors ligne</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NATIF APPLE -->
+  <div style="box-sizing: border-box; width: 100%; padding: 24px 24px 88px; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; background: #FFF; border: 1px solid #E6E1D0; border-radius: 24px; padding: 48px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6B44">100 % natif Apple</div>
+        <h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 36px; line-height: 1.14; letter-spacing: -0.01em; color: #16281D">Une vraie app. Pas une page web déguisée.</h2>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #4E5C50">Solavo est conçue exclusivement pour Mac, iPhone, iPad et Apple Watch : lancement instantané, travail hors ligne au tribunal, synchronisation continue entre vos appareils par iCloud.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; font-weight: 500">
+          <div style="display: flex; gap: 10px"><span style="color: #2B8556; font-weight: 600">—</span> Le chrono vit sur l'écran verrouillé, la Dynamic Island et l'Apple Watch : lancez-le du poignet, suivez-le sur votre cadran</div>
+          <div style="display: flex; gap: 10px"><span style="color: #2B8556; font-weight: 600">—</span> Hors ligne par défaut : le réseau du palais n'est plus votre problème</div>
+          <div style="display: flex; gap: 10px"><span style="color: #2B8556; font-weight: 600">—</span> « Partager › Solavo » depuis Mail ou Fichiers classe la pièce au bon dossier</div>
+          <div style="display: flex; gap: 10px"><span style="color: #2B8556; font-weight: 600">—</span> Au retour d'un appel client, Solavo propose d'imputer le temps passé</div>
+          <div style="display: flex; gap: 10px"><span style="color: #2B8556; font-weight: 600">—</span> « Dis Siri, démarre le chronomètre sur Durand » : chrono, tâches et encours à la voix</div>
+          <div style="display: flex; gap: 10px"><span style="color: #2B8556; font-weight: 600">—</span> App verrouillable par Face ID ou Touch ID, contenu masqué hors de l'app</div>
+        </div>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center">
+        <div style="width: 100%; max-width: 440px; border-radius: 14px; background: #F2EFE3; border: 1px solid #E0DACA; padding: 0 0 18px; box-sizing: border-box; overflow: hidden">
+          <div style="display: flex; gap: 7px; padding: 13px 16px; border-bottom: 1px solid #E0DACA; background: #FAF8F0">
+            <span style="width: 11px; height: 11px; border-radius: 50%; background: #DCD6C2; display: inline-block"></span>
+            <span style="width: 11px; height: 11px; border-radius: 50%; background: #DCD6C2; display: inline-block"></span>
+            <span style="width: 11px; height: 11px; border-radius: 50%; background: #DCD6C2; display: inline-block"></span>
+          </div>
+          <div style="padding: 20px 22px; display: flex; flex-direction: column; gap: 12px">
+            <div style="display: flex; justify-content: space-between; align-items: baseline">
+              <div style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px; color: #114A2E">Cockpit — Octobre 2026</div>
+              <div style="font-size: 12px; color: #7D8878">Exemple</div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: flex-end; height: 110px">
+              <div style="flex: 1; background: #CFD8C8; border-radius: 6px 6px 0 0; height: 45%"></div>
+              <div style="flex: 1; background: #CFD8C8; border-radius: 6px 6px 0 0; height: 65%"></div>
+              <div style="flex: 1; background: #CFD8C8; border-radius: 6px 6px 0 0; height: 52%"></div>
+              <div style="flex: 1; background: #D9B45A; border-radius: 6px 6px 0 0; height: 88%"></div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: space-between; font-size: 13px; color: #4E5C50; border-top: 1px solid #E0DACA; padding-top: 12px">
+              <span>Facturé : <strong>18 240 € HT</strong></span>
+              <span>Encours : <strong>6 410 €</strong> dont en retard : <strong>1 980 €</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APERCU -->
+  <div id="captures" style="box-sizing: border-box; width: 100%; padding: 0 24px 88px; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6B44">Aperçu</div>
+        <h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 40px; line-height: 1.12; letter-spacing: -0.01em; color: #16281D">Essayez sans rien saisir.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4E5C50">Au premier lancement, Solavo s'ouvre sur un cabinet d'exemple complet : clients, dossiers, temps, factures, relances et audiences. Promenez-vous, puis créez votre cabinet quand vous êtes prêt.</p>
+      </div>
+      <div class="captures">
+        <img src="capture-01-cockpit.jpg" alt="Le Cockpit de Solavo : chiffre d'affaires du mois, à facturer, encours" loading="lazy">
+        <img src="capture-02-chrono.jpg" alt="Le chronomètre en marche sur un dossier" loading="lazy">
+        <img src="capture-03-agenda.jpg" alt="L'agenda des audiences" loading="lazy">
+        <img src="capture-05-factures.jpg" alt="Les factures à régler et l'encours" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <!-- SECURITE -->
+  <div id="securite" style="box-sizing: border-box; width: 100%; padding: 88px 24px; background: #114A2E; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+      <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #D9B45A">Secret professionnel</div>
+        <h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 40px; line-height: 1.1; letter-spacing: -0.01em; color: #F7F5EE">Même nous, nous ne pouvons pas lire vos dossiers.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #BFD3C2; max-width: 520px">Un logiciel de cabinet classique range vos dossiers sur ses serveurs. Solavo n'en a pas : vos données vivent dans votre iCloud, chiffrées de bout en bout, et chaque document est chiffré sur votre appareil avant tout envoi. Lisibles par votre cabinet, et par personne d'autre — ni Apple, ni nous.</p>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+        <div style="border: 1px solid #2E5C42; border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 5px">
+          <div style="font-weight: 600; font-size: 15.5px; color: #F7F5EE">Chiffrement de bout en bout</div>
+          <div style="font-size: 14px; line-height: 1.5; color: #BFD3C2">Clients, dossiers, temps, factures : chaque élément synchronisé part chiffré de votre appareil.</div>
+        </div>
+        <div style="border: 1px solid #2E5C42; border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 5px">
+          <div style="font-weight: 600; font-size: 15.5px; color: #F7F5EE">Une clé AES-256 par document</div>
+          <div style="font-size: 14px; line-height: 1.5; color: #BFD3C2">Chaque pièce a sa propre clé, rangée dans la partie chiffrée de bout en bout de votre iCloud.</div>
+        </div>
+        <div style="border: 1px solid #2E5C42; border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 5px">
+          <div style="font-weight: 600; font-size: 15.5px; color: #F7F5EE">Espace client verrouillé</div>
+          <div style="font-size: 14px; line-height: 1.5; color: #BFD3C2">La clé de déchiffrement voyage dans le lien remis au client — jamais sur un serveur.</div>
+        </div>
+        <div style="border: 1px solid #2E5C42; border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 5px">
+          <div style="font-weight: 600; font-size: 15.5px; color: #F7F5EE">L'app elle-même se verrouille</div>
+          <div style="font-size: 14px; line-height: 1.5; color: #BFD3C2">Face ID ou Touch ID à l'ouverture, contenu masqué dès que vous quittez l'app.</div>
+        </div>
+        <div style="border: 1px solid #2E5C42; border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 5px">
+          <div style="font-weight: 600; font-size: 15.5px; color: #F7F5EE">Vos données restent les vôtres</div>
+          <div style="font-size: 14px; line-height: 1.5; color: #BFD3C2">Archive complète lisible sans Solavo (données, CSV, PDF) : portabilité RGPD, conservation et anonymisation des dossiers clos intégrées.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAYS -->
+  <div id="pays" style="box-sizing: border-box; width: 100%; padding: 88px 24px 72px; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6B44">Quatre pays, quatre droits</div>
+        <h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 40px; line-height: 1.12; letter-spacing: -0.01em; color: #16281D">Local jusqu'au plan comptable.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4E5C50">Un cabinet à Lyon, Liège, Luxembourg ou Lausanne ne pratique pas le même droit. Solavo non plus : la facturation, la comptabilité et les délais de procédure suivent le pays du cabinet.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <div style="flex: 1 1 240px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+          <div style="font-weight: 600; font-size: 17px">France</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #4E5C50">Factures Factur-X, export FEC, aide aux déclarations de TVA et à la 2035, délais du CPC (art. 640 à 643), aide juridictionnelle suivie jusqu'au règlement CARPA.</div>
+        </div>
+        <div style="flex: 1 1 240px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+          <div style="font-weight: 600; font-size: 17px">Belgique</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #4E5C50">Factures Peppol, communication structurée (aussi dans le QR de virement), plan PCMN, TVA à l'encaissement, délais du Code judiciaire, aide juridique pro deo.</div>
+        </div>
+        <div style="flex: 1 1 240px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+          <div style="font-weight: 600; font-size: 17px">Luxembourg</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #4E5C50">Plan PCN 2020, TVA 17 % avec aide à la déclaration, mentions RCS et TVA LU, délais du NCPC, intérêts légaux et commerciaux à jour.</div>
+        </div>
+        <div style="flex: 1 1 240px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+          <div style="font-weight: 600; font-size: 17px">Suisse</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #4E5C50">Montants en CHF, QR-facture suisse reconnue au rapprochement, décompte TVA AFC, délais du CPC avec féries judiciaires, jours fériés par canton.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TARIFS -->
+  <div id="tarifs" style="box-sizing: border-box; width: 100%; padding: 0 24px 72px; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-direction: column; gap: 40px; align-items: center">
+      <div style="display: flex; flex-direction: column; gap: 12px; text-align: center; max-width: 600px">
+        <h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 40px; letter-spacing: -0.01em; color: #16281D">Un tarif qui grandit avec vous.</h2>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.55; color: #4E5C50">De l'avocat seul au cabinet de trente. Un associé s'abonne, enregistre la licence du cabinet — et toute l'équipe en bénéficie, chacun voyant ce que son rôle permet.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; justify-content: center">
+        <div style="flex: 1 1 320px; max-width: 440px; min-width: 0; background: #FFF; border: 1px solid #E6E1D0; border-radius: 20px; padding: 34px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
+          <div style="font-weight: 600; font-size: 16px; color: #7D8878">Solo</div>
+          <div style="display: flex; align-items: baseline; gap: 6px">
+            <span style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 48px; color: #114A2E">29&nbsp;€</span>
+            <span style="font-size: 15px; color: #7D8878">/ mois</span>
+          </div>
+          <div style="font-size: 14.5px; line-height: 1.6; color: #4E5C50">Un avocat, dossiers illimités, tout inclus — facturation, délais, coffre chiffré, les quatre pays. 14 jours d'essai gratuit, sans engagement.</div>
+          <a href="https://apps.apple.com/fr/app/solavo/id6821729358" style="margin-top: auto; text-align: center; border: 1.5px solid #114A2E; border-radius: 999px; padding: 13px 20px; font-weight: 600; font-size: 15px; color: #114A2E">Commencer l'essai</a>
+        </div>
+        <div style="flex: 1 1 320px; max-width: 440px; min-width: 0; background: #114A2E; border-radius: 20px; padding: 34px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px; position: relative">
+          <div style="position: absolute; top: 22px; right: 24px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #114A2E; background: #D9B45A; border-radius: 999px; padding: 5px 11px">Évolutif</div>
+          <div style="font-weight: 600; font-size: 16px; color: #9DB8A6">Cabinet</div>
+          <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap">
+            <span style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 48px; color: #F7F5EE">+&nbsp;24&nbsp;€</span>
+            <span style="font-size: 15px; color: #9DB8A6">/ mois par utilisateur ajouté</span>
+          </div>
+          <div style="font-size: 14.5px; line-height: 1.6; color: #BFD3C2">Jusqu'à 30 utilisateurs. Dossiers partagés avec rôles — associé, collaborateur, secrétariat —, facturation consolidée, passage à l'effectif supérieur immédiat. Exemple : 3 utilisateurs, 77 € par mois.</div>
+          <a href="https://apps.apple.com/fr/app/solavo/id6821729358" style="margin-top: auto; text-align: center; background: #F7F5EE; color: #114A2E; border-radius: 999px; padding: 13px 20px; font-weight: 600; font-size: 15px">Équiper le cabinet</a>
+        </div>
+      </div>
+      <div style="font-size: 13px; color: #7D8878; text-align: center">Prix TTC en France, par mois. Abonnement via l'App Store, mensuel ou annuel ; l'annuel offre deux mois, jusqu'à 5 utilisateurs. Le prix exact de votre pays s'affiche dans l'App Store.</div>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div id="acces" style="box-sizing: border-box; width: 100%; padding: 0 24px 96px; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; background: linear-gradient(135deg, #2B8556, #114A2E); border-radius: 24px; padding: 56px 40px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
+      <img src="icone-180.png" alt="" style="width: 56px; height: 56px; border-radius: 13px; display: block; box-shadow: 0 10px 22px rgba(0,0,0,0.3)">
+      <h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 38px; letter-spacing: -0.01em; color: #FFF; max-width: 640px; line-height: 1.15">Soyez du premier barreau équipé.</h2>
+      <p style="margin: 0; font-size: 16.5px; line-height: 1.55; color: #D4E4D8; max-width: 540px">Solavo est disponible sur l'App Store pour iPhone, iPad, Mac et Apple Watch, en France, en Belgique, au Luxembourg et en Suisse. 14 jours d'essai gratuit.</p>
+      <a href="https://apps.apple.com/fr/app/solavo/id6821729358" style="background: #D9B45A; color: #114A2E; border-radius: 999px; padding: 15px 28px; font-weight: 600; font-size: 16px">Télécharger dans l'App Store</a>
+    </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="box-sizing: border-box; width: 100%; padding: 32px 24px 44px; border-top: 1px solid #E6E1D0; display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 1120px; display: flex; flex-wrap: wrap; gap: 18px 36px; align-items: center; font-size: 13.5px; color: #7D8878">
+      <div style="display: flex; align-items: center; gap: 8px">
+        <img src="icone-180.png" alt="Icône Solavo" style="width: 24px; height: 24px; border-radius: 6px; display: block">
+        <span style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 17px; color: #114A2E">solavo</span>
+      </div>
+      <div style="flex: 1 1 auto"></div>
+      <a href="mentions-legales.html" style="color: #7D8878">Mentions légales</a>
+      <a href="https://espace.solavo.fr/confidentialite.html" style="color: #7D8878">Confidentialité</a>
+      <a href="https://espace.solavo.fr/contact.html" style="color: #7D8878">Assistance</a>
+      <span>© 2026 Eric Gourvest · France · Belgique · Luxembourg · Suisse</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
