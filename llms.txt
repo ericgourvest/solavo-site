@@ -1,0 +1,33 @@
+# Solavo
+
+> Solavo est un logiciel de gestion de cabinet d'avocat, natif pour iPhone, iPad, Mac et Apple Watch, disponible sur l'App Store en France, en Belgique, au Luxembourg et en Suisse. Il réunit le temps passé, la facturation, les relances, les audiences et les délais de procédure. Les données restent dans l'iCloud du cabinet, chiffrées de bout en bout : Solavo n'a pas de serveur.
+
+English summary: Solavo is a law practice management app for lawyers, native to iPhone, iPad, Mac and Apple Watch (App Store name in English: "Solavo – Law Firm Manager"). It covers time tracking, billing, payment reminders, court hearings and procedural deadlines for France, Belgium, Luxembourg and Switzerland. Data stays in the firm's own iCloud, end-to-end encrypted. The interface is in French.
+
+## En bref
+
+- Public : avocats exerçant seuls et cabinets jusqu'à 30 utilisateurs (associés, collaborateurs, secrétariat, chacun avec ses droits).
+- Plateformes : Mac, iPhone, iPad, Apple Watch uniquement. Pas de version Windows, Android ni web ; l'espace client destiné aux clients du cabinet s'ouvre dans un navigateur.
+- Prix : 29 € TTC par mois pour un avocat, plus 24 € par mois par utilisateur ajouté (3 utilisateurs : 77 € par mois). Abonnement annuel avec deux mois offerts, jusqu'à 5 utilisateurs. 14 jours d'essai gratuit, sans engagement, via l'App Store.
+- Essai : au premier lancement, un cabinet d'exemple déjà rempli à explorer, puis création de son propre cabinet.
+- Confidentialité : aucun compte à créer, aucune publicité, aucun outil de mesure d'audience. Chiffrement de bout en bout, clé AES-256 par document, verrouillage par Face ID ou Touch ID.
+- Éditeur : Eric Gourvest (France). Application née de l'outil interne d'un cabinet d'avocat.
+
+## Fonctions
+
+- Temps passé : chronomètre sur l'écran verrouillé, la Dynamic Island, l'Apple Watch et par Siri ; rappel des temps oubliés ; taux horaire, forfait ou prix unitaire.
+- Facturation : notes d'honoraires numérotées, provisions, avoirs, débours, paiements partiels, rapprochement bancaire, QR code de virement.
+- Relances : trois niveaux, pénalités et intérêts légaux calculés au jour près.
+- Facture électronique : Factur-X (France) avec export mensuel pour la plateforme agréée, Peppol (Belgique), QR-facture (Suisse).
+- Audiences et délais : agenda des audiences et renvois, calcul des délais de procédure (CPC français, Code judiciaire belge, NCPC luxembourgeois, CPC suisse), rappels à J-7, J-2 et le jour même.
+- Dossiers : clients particuliers et sociétés, conflits d'intérêts, vigilance LCB-FT, pièces scannées, convention d'honoraires signée à distance, aide juridictionnelle et pro deo.
+- Comptabilité : exports FEC et journaux, aide aux déclarations de TVA et à la 2035 (France), plans comptables PCMN (Belgique) et PCN (Luxembourg), décompte TVA AFC (Suisse).
+- Hors ligne par défaut, synchronisation par iCloud.
+
+## Liens
+
+- [Site officiel](https://solavo.fr/)
+- [Solavo sur l'App Store](https://apps.apple.com/fr/app/solavo/id6821729358)
+- [Politique de confidentialité](https://espace.solavo.fr/confidentialite.html)
+- [Assistance et contact](https://espace.solavo.fr/contact.html)
+- [Mentions légales](https://solavo.fr/mentions-legales.html)
