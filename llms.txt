@@ -20,6 +20,7 @@ English summary: Solavo is a law practice management app for lawyers, native to 
 - Relances : trois niveaux, pénalités et intérêts légaux calculés au jour près.
 - Facture électronique : Factur-X (France) avec export mensuel pour la plateforme agréée, Peppol (Belgique), QR-facture (Suisse).
 - Audiences et délais : agenda des audiences et renvois, calcul des délais de procédure (CPC français, Code judiciaire belge, NCPC luxembourgeois, CPC suisse), rappels à J-7, J-2 et le jour même.
+- Contestation d'honoraires : dossier à adresser au bâtonnier préparé en un geste (bordereau, observations pré-remplies, relevé des diligences, décompte, factures et pièces numérotées et tamponnées, en un seul PDF).
 - Dossiers : clients particuliers et sociétés, conflits d'intérêts, vigilance LCB-FT, pièces scannées, convention d'honoraires signée à distance, aide juridictionnelle et pro deo.
 - Comptabilité : exports FEC et journaux, aide aux déclarations de TVA et à la 2035 (France), plans comptables PCMN (Belgique) et PCN (Luxembourg), décompte TVA AFC (Suisse).
 - Hors ligne par défaut, synchronisation par iCloud.
@@ -29,6 +30,7 @@ English summary: Solavo is a law practice management app for lawyers, native to 
 - [Site officiel](https://solavo.fr/)
 - [Guide d'utilisation de Solavo (fiches pratiques)](https://solavo.fr/guide.html)
 - [Guide : facture électronique et cabinets d'avocats (2026-2027)](https://solavo.fr/guide-facture-electronique-avocats.html)
+- [Contestation d'honoraires devant le bâtonnier : procédure et dossier à produire](https://solavo.fr/contestation-honoraires-avocat.html)
 - [Solavo sur l'App Store](https://apps.apple.com/fr/app/solavo/id6821729358)
 - [Politique de confidentialité](https://espace.solavo.fr/confidentialite.html)
 - [Assistance et contact](https://espace.solavo.fr/contact.html)
