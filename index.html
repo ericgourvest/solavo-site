@@ -213,6 +213,9 @@ a { color: #16281D; text-decoration: none; }
 a:hover { color: #2B8556; }
 .captures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .captures img { width: 100%; height: auto; border-radius: 22px; display: block; box-shadow: 0 18px 40px rgba(17,74,46,0.18); }
+.video-apercu { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+.video-apercu video { width: 100%; max-width: 300px; aspect-ratio: 9 / 16; height: auto; border-radius: 22px; display: block; background: #16281D; box-shadow: 0 18px 40px rgba(17,74,46,0.18); }
+.video-apercu div { flex: 1 1 280px; max-width: 460px; display: flex; flex-direction: column; gap: 10px; }
 @media (max-width: 900px) { .captures { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { h1 { font-size: 42px !important; } h2 { font-size: 32px !important; } }
 </style>
@@ -409,6 +412,18 @@ a:hover { color: #2B8556; }
         <h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 40px; line-height: 1.12; letter-spacing: -0.01em; color: #16281D">Essayez sans rien saisir.</h2>
         <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4E5C50">Au premier lancement, Solavo s'ouvre sur un cabinet d'exemple complet : clients, dossiers, temps, factures, relances et audiences. Promenez-vous, puis créez votre cabinet quand vous êtes prêt.</p>
       </div>
+      <div class="video-apercu">
+        <video controls playsinline preload="none" poster="solavo-24s.jpg" aria-label="Solavo en 24 secondes : lancer le chronomètre, ouvrir un dossier, voir la facture">
+          <source src="solavo-24s.mp4" type="video/mp4">
+        </video>
+        <div>
+          <h3 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 26px; line-height: 1.2; color: #16281D">Solavo en 24 secondes</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4E5C50">Un toucher pour lancer le chronomètre sur un dossier, depuis l'iPhone ou l'Apple Watch. Le temps passé rejoint la fiche du dossier, puis la facture.</p>
+        </div>
+      </div>
+      <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "VideoObject", "name": "Solavo en 24 secondes", "description": "Lancer le chronomètre sur un dossier, retrouver le temps passé et la facture dans Solavo, logiciel de cabinet d'avocat pour Mac, iPhone et iPad.", "thumbnailUrl": "https://solavo.fr/solavo-24s.jpg", "contentUrl": "https://solavo.fr/solavo-24s.mp4", "uploadDate": "2026-11-17", "duration": "PT24S", "inLanguage": "fr"}
+      </script>
       <div class="captures">
         <img src="capture-01-cockpit.jpg" alt="Le Cockpit de Solavo : chiffre d'affaires du mois, à facturer, encours" loading="lazy">
         <img src="capture-02-chrono.jpg" alt="Le chronomètre en marche sur un dossier" loading="lazy">
