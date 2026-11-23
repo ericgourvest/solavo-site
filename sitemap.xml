@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://solavo.fr/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://solavo.fr/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://solavo.fr/guide.html</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://solavo.fr/guide-facture-electronique-avocats.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://solavo.fr/contestation-honoraires-avocat.html</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://solavo.fr/llms.txt</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://solavo.fr/depot-pieces-voie-electronique.html</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://solavo.fr/llms.txt</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://solavo.fr/mentions-legales.html</loc><lastmod>2026-11-16</lastmod></url>
 </urlset>

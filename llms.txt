@@ -31,6 +31,7 @@ English summary: Solavo is a law practice management app for lawyers, native to 
 - [Guide d'utilisation de Solavo (fiches pratiques)](https://solavo.fr/guide.html)
 - [Guide : facture électronique et cabinets d'avocats (2026-2027)](https://solavo.fr/guide-facture-electronique-avocats.html)
 - [Contestation d'honoraires devant le bâtonnier : procédure et dossier à produire](https://solavo.fr/contestation-honoraires-avocat.html)
+- [Dépôt des pièces par voie électronique en France, Belgique, Luxembourg et Suisse : ce que Solavo prépare](https://solavo.fr/depot-pieces-voie-electronique.html)
 - [Solavo sur l'App Store](https://apps.apple.com/fr/app/solavo/id6821729358)
 - [Politique de confidentialité](https://espace.solavo.fr/confidentialite.html)
 - [Assistance et contact](https://espace.solavo.fr/contact.html)
