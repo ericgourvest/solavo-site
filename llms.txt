@@ -21,6 +21,11 @@ English summary: Solavo is a law practice management app for lawyers, native to 
 - Facture électronique : Factur-X (France) avec export mensuel pour la plateforme agréée, Peppol (Belgique), QR-facture (Suisse).
 - Audiences et délais : agenda des audiences et renvois, calcul des délais de procédure (CPC français, Code judiciaire belge, NCPC luxembourgeois, CPC suisse), rappels à J-7, J-2 et le jour même.
 - Contestation d'honoraires : dossier à adresser au bâtonnier préparé en un geste (bordereau, observations pré-remplies, relevé des diligences, décompte, factures et pièces numérotées et tamponnées, en un seul PDF).
+- Fonds de tiers : registre par dossier des sommes reçues pour le compte du client (CARPA en France, compte de qualité ou de tiers ailleurs) et de leur sortie, solde, relevé PDF pour le client, alerte sur les fonds qui dorment. Solavo tient le registre, il ne déplace pas les fonds.
+- Communication de pièces : pièces numérotées et tamponnées, bordereau, et archive « Prêt à déposer » au format du pays (envois de 9 Mo au plus pour e-Barreau, un fichier par pièce pour DPA-Deposit, farde à imprimer au Luxembourg, bordereau PDF/A en Suisse). Solavo prépare les fichiers, il ne dépose pas à la place de l'avocat.
+- Courriers et actes : modèles à compléter (mise en demeure, lettre officielle au confrère, trame de conclusions, pouvoir) ; classement d'un courriel dans un dossier, en PDF lisible avec ses pièces jointes.
+- Journal d'activité : trace de qui a fait quoi et quand (dossiers, temps, factures, règlements, fonds de tiers, pièces, audiences, tâches), filtrable et exportable ; trace interne, non horodatée par un tiers.
+- Appels (iPhone) : durée d'un appel proposée à la saisie sur un dossier ; nom du client affiché sur l'écran d'appel.
 - Dossiers : clients particuliers et sociétés, conflits d'intérêts, vigilance LCB-FT, pièces scannées, convention d'honoraires signée à distance, aide juridictionnelle et pro deo.
 - Comptabilité : exports FEC et journaux, aide aux déclarations de TVA et à la 2035 (France), plans comptables PCMN (Belgique) et PCN (Luxembourg), décompte TVA AFC (Suisse).
 - Hors ligne par défaut, synchronisation par iCloud.
